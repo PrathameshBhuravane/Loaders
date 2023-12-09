@@ -1,0 +1,11 @@
+framework module Loaders {
+  umbrella header "Loaders.h"
+  export *
+
+  module * { export * }
+}
+
+module Loaders.Swift {
+  header "Loaders-Swift.h"
+  requires objc
+}

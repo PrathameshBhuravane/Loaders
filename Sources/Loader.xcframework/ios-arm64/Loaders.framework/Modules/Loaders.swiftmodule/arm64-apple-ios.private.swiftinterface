@@ -1,0 +1,30 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.9 (swiftlang-5.9.0.128.108 clang-1500.0.40.1)
+// swift-module-flags: -target arm64-apple-ios17.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name Loaders
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+@_exported import Loaders
+import Swift
+import UIKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class PercentageLoader : ObjectiveC.NSObject, UIKit.UIPickerViewDelegate, UIKit.UIPickerViewDataSource {
+  @_Concurrency.MainActor(unsafe) open var setColorForPercentagePicker: UIKit.UIColor
+  @_Concurrency.MainActor(unsafe) public static let sharedInstance: Loaders.PercentageLoader
+  @_Concurrency.MainActor(unsafe) @objc public func numberOfComponents(in pickerView: UIKit.UIPickerView) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc public func pickerView(_ pickerView: UIKit.UIPickerView, numberOfRowsInComponent component: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc public func pickerView(_ pickerView: UIKit.UIPickerView, viewForRow row: Swift.Int, forComponent component: Swift.Int, reusing view: UIKit.UIView?) -> UIKit.UIView
+  @_Concurrency.MainActor(unsafe) @objc public func pickerView(_ pickerView: UIKit.UIPickerView, rowHeightForComponent component: Swift.Int) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) open func setPercentage(percentage: Swift.Int)
+  @_Concurrency.MainActor(unsafe) open func addPercentageLoader(parentView: UIKit.UIView, width: CoreFoundation.CGFloat? = nil, height: CoreFoundation.CGFloat? = nil)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers open class DotAnimatedLoader : ObjectiveC.NSObject {
+  public static let sharedInstance: Loaders.DotAnimatedLoader
+  open func setColorToDots(color: UIKit.UIColor)
+  @objc deinit
+  open func endRotation()
+  open func StartLoader(parentView: UIKit.UIView, width: CoreFoundation.CGFloat? = nil, height: CoreFoundation.CGFloat? = nil)
+  @objc override dynamic public init()
+}

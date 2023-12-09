@@ -4,20 +4,14 @@
 import PackageDescription
 
 let package = Package(
-    name: "Custom_Loaders",
+    name: "Loaders",
     products: [
-        // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
-            name: "Custom_Loaders",
-            targets: ["Custom_Loaders"]),
+            name: "Loaders",
+            targets: ["Loaders"]),
     ],
+    dependencies: [],
     targets: [
-        // Targets are the basic building blocks of a package, defining a module or a test suite.
-        // Targets can depend on other targets in this package and products from dependencies.
-        .target(
-            name: "Custom_Loaders"),
-        .testTarget(
-            name: "Custom_LoadersTests",
-            dependencies: ["Custom_Loaders"]),
+        .binaryTarget(name: "Loaders", path: "./Sources/Loader.xcframework"),
     ]
 )
